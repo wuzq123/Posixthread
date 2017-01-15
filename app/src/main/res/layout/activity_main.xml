@@ -38,7 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="间隔时间："/>
+            android:text="每个线程执行循环次数："/>
 
         <EditText
             android:id="@+id/iterationText"
