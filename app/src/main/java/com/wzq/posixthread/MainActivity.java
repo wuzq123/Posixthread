@@ -57,4 +57,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    public void startClear(View view)
+    {
+        logText.setText("");
+    }
 }

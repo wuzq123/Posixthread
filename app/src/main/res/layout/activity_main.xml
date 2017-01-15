@@ -49,13 +49,26 @@
             android:singleLine="true"
             android:text="5"/>
     </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="开始"
-        android:clickable="true"
-        android:onClick="startExe"/>
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始"
+            android:clickable="true"
+            android:onClick="startExe"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除"
+            android:clickable="true"
+            android:onClick="startClear"/>
+    </LinearLayout>
+
 
 
     <ScrollView
