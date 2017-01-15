@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView logText;
 
     private PthreadUtil pthreadUtil;
+    private int idx = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void startExe(View view)
     {
-
+        idx = 0;
         int id = Integer.parseInt(threadsText.getText().toString().trim());
         if(id <= 0)
             id = threadsCnt;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                logText.append(message);
+                logText.append((idx ++ ) + "、" + message);
                 logText.append("\n");
             }
         });
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void startClear(View view)
     {
+        idx = 0;
         logText.setText("");
     }
 }
