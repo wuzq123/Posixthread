@@ -12,9 +12,13 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++11 -frtti -fexceptions -I/home/wzq/soft/android/sdk/ndk-bundle/sources/cxx-stl"
-
+                cppFlags "-std=c++11","-frtti", "-fexceptions", "-I/home/wzq/soft/android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include"
+                cFlags "-D_EXAMPLE_C_FLAG1", "-D_EXAMPLE_C_FLAG2"
             }
+        }
+        ndk {
+            stl "gnustl_shared"
+            ldLibs "log"
         }
     }
     buildTypes {
